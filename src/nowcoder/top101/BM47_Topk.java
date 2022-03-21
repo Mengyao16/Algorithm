@@ -1,6 +1,7 @@
 package Algorithm.nowcoder.top101;
 
 public class BM47_Topk {
+    //时间复杂度o(n)
 
     public static int findKth(int[] a, int n, int K) {
         return quickSort(a, 0, n - 1, n-K);
