@@ -13,7 +13,6 @@ public class BM14 {
         while( even!=null&& even.next!=null){
             odd.next = even.next;
             odd = odd.next;
-
             even.next = odd.next;
             even = even.next;
 
