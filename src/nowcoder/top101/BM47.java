@@ -1,6 +1,6 @@
 package Algorithm.nowcoder.top101;
 
-public class BM47_Topk {
+public class BM47 {
     //时间复杂度o(n)
 
     public static int findKth(int[] a, int n, int K) {
