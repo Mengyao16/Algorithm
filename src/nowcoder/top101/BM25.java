@@ -6,7 +6,7 @@ import java.util.List;
 import Algorithm.structure.TreeNode;
 
 public class BM25 {
-    //中序遍历
+    //后序遍历
     public static List<Integer>  postorderTraversal(TreeNode root){
         List<Integer> res = new ArrayList<>();
         postorder(root,res);

@@ -18,7 +18,7 @@ public class BM48 {
         if(queMin.isEmpty()||num<= queMin.peek()){
             queMin.offer(num);
             if(queMax.size()+1< queMin.size()){
-                queMin.offer(queMin.poll());
+                queMax.offer(queMin.poll());
             }
         }else{
             queMax.offer(num);

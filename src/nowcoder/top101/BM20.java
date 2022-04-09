@@ -26,7 +26,7 @@ public class BM20 {
         for (int k = l; k <= r; k++) {
             if(i==mid+1) nums[k] = tmp[j++];
             else if(j==r+1||tmp[i]<=tmp[j]){
-                nums[k] = tmp[j++];
+                nums[k] = tmp[i++];
             }
             else{
                 nums[k] = tmp[j++];

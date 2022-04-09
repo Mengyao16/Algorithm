@@ -8,21 +8,24 @@ public class BM40 {
     //输入前序和中序遍历的结果，构建该二叉树并返回节点
     //假设不含重复数字
     int[] preorder;
+    int[] inorder;
     HashMap<Integer,Integer> map = new HashMap();
     public TreeNode buildTree(int[] preorder,int[] inorder){
         this.preorder = preorder;
+        this.inorder = inorder;
         for (int i = 0; i < inorder.length; i++) {
-            map.put(i,inorder[i]);
+            map.put(inorder[i],i);
         }
 
-        return build(0,0,inorder.length);
+        return build(0,preorder.length,0,inorder.length);
     }
-    public TreeNode build(int root,int l,int r){
-        if(l>=r) return null;
-        TreeNode node = new TreeNode(preorder[root]);
-        int i = map.get(preorder[root]);//获得root在中序遍历的i位置
-        node.left = build( root+1, l, i-1);
-        node.right = build( root-l+i+1, i+1, r);
+    public TreeNode build(int pstart,int pend,int istart,int iend){
+        if(pstart>=pend) return null;
+        TreeNode node = new TreeNode(preorder[pstart]);
+        int i = map.get(preorder[pstart]);//获得root在中序遍历的i位置
+        int leftNum = i-istart;
+        node.left = build(pstart+1, pstart+leftNum+1,istart,i);
+        node.right = build(pstart+leftNum+1,pend, i+1,iend);
         return node;
 
     }
