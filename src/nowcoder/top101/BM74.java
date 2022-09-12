@@ -4,8 +4,6 @@ import java.util.List;
 
 public class BM74 {
     //数字字符串转化为ip地址
-    public List<String> restoreIpAddress(String s){
 
-    }
 
 }
