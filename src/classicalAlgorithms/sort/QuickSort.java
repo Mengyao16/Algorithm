@@ -1,4 +1,4 @@
-package Algorithm.sort;
+package Algorithm.classicalAlgorithms.sort;
 
 import java.util.Arrays;
 import java.util.LinkedList;
